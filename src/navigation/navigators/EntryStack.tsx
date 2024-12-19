@@ -1,14 +1,15 @@
 import colors from '@libs/styles/colors';
 import { CustomTheme } from '@libs/styles/types';
-import { navigationRoutes } from '@navigation/routes/navigationRoutes';
 import { DefaultTheme, NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import React from 'react';
 import { View } from 'react-native';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import ForceUpdateNavigator from './ForceUpdateNavigator';
+import { ParamsList } from './types';
+import Login from '@modules/auth/screens/Login';
 
-const Stack = createStackNavigator();
+const Stack = createStackNavigator<ParamsList>();
 
 const Mytheme: CustomTheme = {
   ...DefaultTheme,
@@ -35,8 +36,8 @@ function EntryStack() {
           }}
         >
           <Stack.Screen
-            name={navigationRoutes.ForceUpdateNavigator}
-            component={ForceUpdateNavigator}
+            name={'Login'}
+            component={Login}
           />
         </Stack.Navigator>
       </NavigationContainer>

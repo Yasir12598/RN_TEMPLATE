@@ -3,8 +3,8 @@ import { initialWindowMetrics } from 'react-native-safe-area-context';
 
 const { width: SCREEN_WIDTH, height: SCREEN_HEIGHT } = Dimensions.get('window');
 
-const widthBaseScale = SCREEN_WIDTH / 390;
-const heightBaseScale = SCREEN_HEIGHT / 844;
+const widthBaseScale = SCREEN_WIDTH / 390; // width size according to your design screen width
+const heightBaseScale = SCREEN_HEIGHT / 844; // height size according to your design screen height
 
 const normalize = (size: number, based = 'width') => {
   const newSize =

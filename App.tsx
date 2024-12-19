@@ -1,13 +1,12 @@
 import EntryStack from '@navigation/navigators/EntryStack';
 import store from '@store/index';
-import React from 'react';
-import { StatusBar, View, Text } from 'react-native';
+import { StatusBar } from 'react-native';
+import { GestureHandlerRootView } from 'react-native-gesture-handler';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
+import { ToastProvider } from 'react-native-toast-notifications';
 import { Provider } from 'react-redux';
 import { persistStore } from 'redux-persist';
 import { PersistGate } from 'redux-persist/integration/react';
-import { GestureHandlerRootView } from 'react-native-gesture-handler';
-import { ToastProvider } from 'react-native-toast-notifications';
 
 const App = () => {
   let persistor = persistStore(store);
